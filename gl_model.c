@@ -372,7 +372,7 @@ void Mod_LoadTextures (lump_t *l)
 // Baker: let's see if this works as is
 		// HACK HACK HACK
 		if (!strcmp(mt->name, "shot1sid") && mt->width == 32 && mt->height == 32 && 
-		    CRC_Block((byte *)(mt + 1), mt->width * mt->height) == 65393)
+		    // CRC_Block((byte *)(mt + 1), mt->width * mt->height) == 65393)
 		{	// This texture in b_shell1.bsp has some of the first 32 pixels painted white.
 			// They are invisible in software, but look really ugly in GL. So we just copy
 			// 32 pixels from the bottom to make it look nice.
